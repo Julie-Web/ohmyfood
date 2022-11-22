@@ -1,0 +1,1036 @@
+/***GENERAL***/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/***TITRE***/
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+h1, h2 {
+    font-size: 22px;
+}
+
+h3 {
+    font-size: 19px;
+}
+
+/***LIEN GENERAL***/
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+/***PARAGRAPHE***/
+
+p {
+    font-size: 17px;
+}
+
+/***ANIMATION LOADER***/
+
+.loader {
+
+    /***VISIBILITE CACHER***/
+    visibility: hidden;
+
+    /***CREATION DU LOADER*/
+
+    /***TAILLE, TYPE DE TRAIT, COULEUR***/
+    border-top: 10px solid #db6dda;
+    border-bottom: 10px solid #db6dda;
+    border-left: 10px solid #bd63db;
+    border-right: 10px solid #bd63db;
+    /***ARRONDIR POUR FAIRE LE CERCLE***/
+    border-radius: 50%;
+    /***LARGEUR, HAUTEUR***/
+    width: 100px;
+    height: 100px;
+
+    /***Une animation dont le timing est linéaire : elle ne connaît pas d'accentuation à l'accélération ou à la décélération. Sa courbe est totalement droite du point A au point B*/ 
+    /***EN CONTINU***/
+    animation: spin 1.5s linear ;
+
+    /***PLACEMENT LOADER***/
+
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+}
+
+/***POUR QUE LES ANCIENS NAVIGATEURS VOYENT LA TRANSFORMATION***/
+
+@-webkit-keyframes spin {
+
+    /***L'ANIMATION DEBUTE, ETAT INITIAL***/
+
+    0% {
+        -webkit-transform: rotate(0deg);
+        animation-play-state: running;
+    }
+
+    /***L'ANIMATION VA ALLER DE 0 A 360 DEGRES ET DE FACON LINEAR VA PROGRESSER JUSQU'A 100%***/
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        animation-play-state: paused;
+    }
+
+}
+  
+@keyframes spin {
+
+    /***L'ANIMATION DEBUTE***/
+
+    0% {
+        visibility: visible;
+        transform: rotate(0deg);
+        animation-play-state: running;
+    }
+
+    /***L'ANIMATION VA ALLER DE 0 A 360 DEGRES ET DE FACON LINEAR VA PROGRESSER JUSQU'A 100%***/
+
+    100% {
+        visibility:hidden;
+        transform: rotate(360deg);
+        animation-play-state: paused;
+    }
+
+}
+
+/***HEADER***/
+
+header {    
+    text-align: center;
+
+    /***LIEN***/
+
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        /***LOGO***/
+
+        img {
+            width: 40%;
+            padding: 14px;
+        }
+
+    }
+
+    i {
+        margin-right: 10px;
+        margin-left: 0;
+    }
+
+    /***PARAGRAPHE***/
+
+    p {
+        text-align: center;
+        background-color: #eaeaea;
+        margin: 0;
+        padding: 10px;
+        box-shadow: 0px -3px #dcdcdc; 
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+}
+
+/***PAGE ACCUEIL***/
+
+/***SECTION***/
+
+main {
+
+    /***IMAGES GENERAL POUR TOUTE LES PAGES***/
+
+    img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-top-left-radius: 10px 10px;
+        border-top-right-radius: 10px 10px;
+    }
+    
+    #reservez {
+        background-color: #f6f6f6;
+        padding: 40px 20px 50px;
+        text-align: center;
+
+        a {
+            color: white;
+            border-radius: 30px;
+            width: 47%;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 5px 15px;
+            padding: 10px;
+            display: flex;
+            margin: auto;
+            font-size: 17px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .degrade-diagonal {
+            background: linear-gradient(to bottom right, #e671da, #b05fdb);
+        }
+          
+        div {
+            width: 120px;
+            height: 120px;
+        }
+
+    }   
+
+    .degrade-diagonal:hover {
+        filter: brightness(1.75);
+    }
+
+    /***A LA PREMIERE SECTION***/
+
+    /***DEUXIEME SECTION***/
+
+    #fonctionnement {
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        /***TITRE***/
+
+        h1 {
+            margin-left: 15px;
+        }
+
+        /***ANIMATION HOVER AU SURVOL***/
+           
+        div {
+            li:hover {        
+                background-color: #f5edff;
+
+                .fa-mobile-screen-button, .fa-list, .fa-store {
+                    color: #9356dc;
+                }
+            }
+        }
+
+        /***LISTE***/
+            
+        ul {
+            padding-left: 20px;
+            padding-right: 20px;
+
+            li {
+                width: 100%;
+                margin-bottom: 20px;
+                list-style-type: none;
+                background-color: #f6f6f6;
+                border-radius: 20px;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 5px 15px;
+                display: flex;
+                align-items: center;
+                padding: 15px 15px 15px 0;
+                font-family: 'Roboto', sans-serif;
+                font-weight: bold;
+
+                /***ICONE***/
+
+                i:nth-child(2) {
+                    margin-left: 20px;
+                    margin-right: 20px;
+                    color: #7f7f7f;
+                }
+
+                /***ICONES***/
+
+                .fa-1, .fa-2, .fa-3 {
+                    color: white;
+                    background-color: #9356dc;
+                    border: 2px solid #e8e8e8;
+                    border-radius: 100%;
+                    padding: 6px;
+                    width: 26px;
+                    height: 25px;
+                    display: flex;
+                    justify-content: center;
+                    position: relative;
+                    margin-left: -11px;
+                    font-size: 10px;
+                }
+
+                /***ICONES HOVER AU SURVOL***/
+
+                .fa-1:hover, .fa-2:hover, .fa-3:hover {
+                    color: white;
+                }
+                    
+            }
+
+        }
+
+    }
+
+    /***TROISIEME SECTION***/
+
+    #restaurants {
+        background-color: #f6f6f6;
+        padding: 30px 20px 65px;
+
+        /***DIV***/
+
+        .flex {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            .groupe {
+                position: relative;
+                box-shadow: 1px 1px 6px #d7d8d8;
+                border-radius: 16px;
+                width: 100%;
+                margin-top: 20px;
+
+                .texte_gauche {
+                    padding-top: 20px;
+
+                    h3, p {
+                        margin-left: 12px;
+                        line-height: 6px;
+                    }
+
+                }
+
+                .animation {
+                    padding: 1px 0px 10px 0px;
+
+                    .icone_droite {
+                        text-align: right;
+                        margin-right: 2rem;
+                        font-size: 25px;
+                        margin-top: -51px;
+                        padding-bottom: 30px;
+
+                        .fa-heart-animated {
+                            left: 97%;
+                            bottom: 13%;
+                        }
+
+                    }
+
+                }
+
+                /***PARAGRAPHE***/
+        
+                .nouveau {
+                    top: 15px;
+                    right: 15px;
+                    text-align: right;
+                    background-color: #99e2d0;
+                    color: #269d81;
+                    position: absolute;
+                    border-radius: 3px;
+                    padding: 10px;
+                    margin: 0;
+                    font-size: 16px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    font-weight: bold;
+                }
+
+            }
+
+            /***DIV***/
+
+            .deux_cartes {
+                padding: 0;
+            }
+
+        }
+
+    }
+
+}
+
+footer {
+    background-color: #353535;
+    padding: 20px 20px 30px;
+
+    /***LIEN***/
+
+    .ohmyfood {
+        color: white;
+        font-family: 'Shrikhand', cursive;
+        font-size: 18px;
+    }
+
+    /***BARRE DE NAVIGATION***/
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        padding-top: 14px;
+
+        /***LIEN***/
+
+        a {
+            color: white;
+            padding: 3px;
+        }
+
+        /***ICONE***/
+
+        i {
+            margin: 0;
+            margin-right: 10px;
+        }
+
+    }
+
+}
+
+/***LES PAGES RESTAURANTS***/
+
+/***BODY***/
+
+#carte_restaurant {
+
+    /***HEADER***/
+
+    header {
+        display: flex;
+
+        /***LIEN***/
+
+        a {
+            display: flex;
+            justify-content: initial;
+            align-items: center; 
+            
+            /***ICONE***/
+
+            .fa-arrow-left {
+                margin-left: 15px;
+            }
+
+        }
+
+        /***LOGO***/
+
+        .logo {
+            width: 91%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    }
+
+    /***DIV IMAGE DE FOND***/
+
+    #imageDeFond_francaise img, #imageDeFond_laNoteEnchantee img, #imageDeFond_LaPaletteDuGout img, #imageDeFond_LeDeliceDesSens img {
+        height: 100%;
+        border-radius: 0;
+    }
+
+    /***PREMIERE SECTION***/
+    
+    #section_carte {
+        background-color: #f6f6f6;
+        border-radius: 40px;
+        margin-top: -69px;
+        position: relative;
+        padding: 20px 20px 20px;
+    
+        /***TITRE***/
+
+        .texte_gauche h1 {
+            font-family: 'Shrikhand', cursive;
+            font-size: 30px;
+            font-weight: normal;
+        }
+
+        /***DIV***/
+
+        .cartes {
+
+            /***DIV***/
+
+            #margin {
+                margin-top: 0px;
+            }
+
+            .width {
+                margin-top: 35px;
+                margin-right: 15px;
+
+                /*** TITRE***/
+
+                h3 {
+                    text-transform: uppercase;
+                    border-bottom: 3px solid #99e2d0;
+                    width: 8%;
+                    padding-bottom: 5px;
+                    font-weight: normal;
+                    font-size: 17px;
+                }
+
+                /***DIV***/
+
+                .plat {
+                    box-shadow: 1px 1px 6px #d7d8d8;
+                    display: flex;
+                    height: 70px;
+                    align-items: center;
+                    margin-top: 15px;
+                    margin-bottom: 10px;
+                    background-color: white;
+                    border-radius: 20px;
+                    padding-left: 6px;
+                    overflow: hidden;
+                    width:100%;
+
+                    /***DEUXIEME DIV***/
+
+                    .check {
+                        background-color: #99e2d0;
+                        width: 75px;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;  
+                        margin-left: 10px;
+                        transition:all 1s;
+                        margin-right: -75px;
+                
+                        .fa-check {
+                            font-size: 17px;
+                            background-color: white;
+                            border-radius: 30px;
+                            padding: 5px;
+                            color: #99e2d0;
+                        }
+                
+                    }
+
+                    &:hover .check {
+                        /***SA POUSSE SUR LE COTE DROIT***/
+                        margin-right: 0;
+                        
+                        /***DUREE DE L'ANIMATION***/
+                        /***all  permet d’appliquer des transitions simultanément à toutes les propriétés***/
+                        transition:all 1s;
+
+                        /***FAIRE TOURNER***/
+                        .fa-check {
+                            transform: rotate(360deg);
+                            transition: all 1s;
+                        }
+                    }
+
+                    /***PREMIERE DIV***/
+
+                    .partie_blanche {
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        overflow: hidden;
+
+                        .partie_de_gauche {
+                            width: 100%;
+                            
+                            * {
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                            }
+
+                            /***TITRE***/
+
+                            h4 {
+                                font-size: 18px;
+                                margin: 10px 0 0 10px;
+                            }
+
+                            p {
+                                margin: 5px 0 10px 10px;
+                            }
+
+                        }
+                    }
+                    .prix {
+                        display:flex;
+                        justify-content: flex-end;
+                        align-items: flex-end;
+                        height: 100%;
+                        margin: 0;
+                        padding-bottom: 10px;
+                        padding-right: 5px;
+                        width: auto;
+                    }
+
+                }
+            }
+        }
+    }
+
+    /***LIEN COMMANDER***/
+    
+    .degrade-diagonal {
+        background: linear-gradient(to bottom right, #e671da, #b05fdb);
+        color: white;
+        border-radius: 30px;
+        width: 39%;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 5px 15px;
+        padding: 15px;
+        margin: auto;
+        display: flex;
+        justify-content: center;    
+        margin-top: 50px;  
+        margin-bottom: 50px;
+    }
+
+}
+
+/***ANIMATION COEUR***/
+
+/***DIV***/
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /***DIV***/
+
+    .animation {
+        font-size: 25px;
+        padding: 20px 0px 20px 0px;
+        margin-right: 15px;
+
+        #contenu {
+            position: relative;
+            height: 26px;
+            cursor: pointer;
+
+            /***ICONE***/
+
+            .fa-heart-animated {
+                /***ABSOLUTE : PEUT ABSOLUMENT ALLER PARTOUT RELATIVEMENT DANS LE CONTENU***/
+                position: absolute;
+                left: 50%;
+                -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+                bottom: 0;
+                font-size: 0px;
+                color: #9356DC;
+                /***DEFINIR LE GRAS***/
+                font-weight: bold;
+                /***DUREE DE L'ANIMATION***/
+                -webkit-transition-duration: 0.5s;
+                transition-duration: 0.5s;
+            }
+
+        }
+        
+        #contenu:hover .fa-heart-animated {
+            font-size: 25px;
+        }
+
+    }
+
+}
+
+/***ANIMATION DEFILEMENT***/
+
+.plat {
+    /***ease : elle suit un profil d’accélération plus net, et une rampe de décélération plus prononcée ; both : prolonge l'animation dans les deux sens ;***/
+    -webkit-animation: slideup 1s ease both;
+    animation: slideup 1s ease both;
+}
+
+/***DELAI DE L'ANIMATION***/
+
+.delay-1 {
+    animation-delay: 0.1s;
+}
+
+.delay-2 {
+    animation-delay: 0.2s;
+}
+
+.delay-3 {
+    animation-delay: 0.3s;
+}
+
+.delay-4 {
+    animation-delay: 0.4s;
+}
+
+.delay-5 {
+    animation-delay: 0.5s;
+}
+
+.delay-6 {
+    animation-delay: 0.6s;
+}
+
+.delay-7 {
+    animation-delay: 0.7s;
+}
+
+.delay-8 {
+    animation-delay: 0.8s;
+}
+
+.delay-9 {
+    animation-delay: 0.9s;
+}
+
+.delay-10 {
+    animation-delay: 0.9s;
+}
+
+/***POUR QUE LES ANCIENS NAVIGATEURS VOYENT L'ANIMATION***/
+
+@-webkit-keyframes slideup {
+    from {
+        /***translateY; 100px de bas en haut, -100px aurait m'y de haut en bas***/
+        transform: translateY(100px);
+        /***EFFET TRANSPARENCE**/
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/***REGLES***/
+
+@keyframes slideup {
+    /***0% indique l'état initial de l'animation***/
+    from {
+        /***translateY; 100px de bas en haut, -100px aurait m'y de haut en bas***/
+        transform: translateY(100px);
+        /***EFFET TRANSPARENCE**/
+        opacity: 0;
+    }
+    /**100% indique l'état final.***/
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (min-width: 700px) { 
+
+    h1 {
+        text-align: center;
+    }
+   
+    /***PREMIERE SECTION LIEN***/
+
+    main {
+
+        #reservez a {
+            width: 46%;
+        }
+        
+        #fonctionnement div ul {
+            display: flex;
+
+            li {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+
+        }
+
+        #restaurants .flex {
+            display: flex;
+            flex-direction: initial;
+
+            .groupe {
+                margin-left: 20px;
+                margin-right: 20px;
+                margin-bottom: 20px;
+            }
+
+        }
+
+    }
+
+    main #restaurants .flex .groupe .animation .icone_droite .fa-heart-animated {
+        left: 95%;
+    }
+
+}
+
+@media screen and (min-width: 500px) { 
+
+    main #restaurants .flex .groupe .animation .icone_droite .fa-heart-animated {
+        left: 97.5%;
+    }
+
+}
+
+@media screen and (min-width: 800px) { 
+
+    main #restaurants .flex .groupe .animation .icone_droite .fa-heart-animated {
+        left: 96%;
+    }
+
+}
+
+@media screen and (min-width: 900px) { 
+
+    main {
+
+        /***DEUXIEME SECTION***/
+            
+        #fonctionnement {
+        
+            div {
+
+                ul {
+                    display: flex;
+                    padding: 0px;
+
+                    li {
+                        margin-left: 10px;
+                        margin-right: 10px;
+                        margin-bottom: 0;
+                    }
+                }
+
+            }
+            
+        }
+
+        /***TROISIEME SECTION***/
+
+        #restaurants {
+
+            /***DIV***/
+            
+            .flex {
+                display: flex;
+                flex-direction: initial;
+                width: 80%;
+                margin: auto;
+            }
+
+        }
+
+    }
+
+}
+
+@media screen and (min-width: 1000px) { 
+
+    /***HEADER***/
+
+    /***IMAGE***/
+
+    header a img {
+        width: 14%;
+    }
+
+    /***MAIN****/
+
+    main {
+        
+        /***PREMIERE SECTION LIEN***/
+
+        #reservez a {
+            width: 27%;
+        }
+
+        /***DEUXIEME SECTION***/
+
+        #fonctionnement {
+
+            /***TITRE***/
+
+            h1 {
+                padding-bottom: 15px;
+            }
+
+            div {
+                display: flex;
+                justify-content: center;
+
+                ul {
+                    display: flex;
+                    width: 80%;
+                }
+
+            }
+
+        }
+
+        /***TROISIEME SECTION***/
+
+        #restaurants {
+
+            /***TITRE***/
+
+            h1 {
+                padding-bottom: 15px;
+            }
+
+        }
+
+    }
+
+    /***PAGES MENU***/
+    
+    #carte_restaurant {
+
+        /***HEADER***/
+
+        header {
+
+            /***ICONE***/
+            
+            i {
+                font-size: 28px;
+            }
+
+        }
+
+        /***DIV IMAGE DE FOND***/
+
+        #imageDeFond_francaise img, #imageDeFond_laNoteEnchantee img, #imageDeFond_LaPaletteDuGout img, #imageDeFond_LeDeliceDesSens img {
+            height: 600px;
+        }
+
+        /***PREMIERE SECTION***/
+        
+        #section_carte {
+
+            /***DIV***/
+
+            .flex {
+                justify-content: center;
+
+                .texte_gauche {
+                    margin-right: 40px;
+                }
+
+            }
+            
+            .cartes {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+
+                #margin {
+                    margin-top: auto;
+                }
+
+                .width { 
+
+                    /***TITRE***/
+
+                    h3 {
+                        margin-left: 40px;
+                    }
+
+                    /***DIV***/
+
+                    .plat {
+                        margin-left: 40px;
+                    }
+
+                }
+
+            }
+
+            /***LIEN COMMANDER***/
+            
+            .degrade-diagonal {
+                width: 11%;
+            }
+
+        }
+
+    }
+
+    main #restaurants .flex .groupe .animation .icone_droite .fa-heart-animated {
+        left: 96%;
+    }
+
+}
+
+
+@media screen and (min-width: 1400px) { 
+
+    main {
+
+        /***DEUXIEME SECTION***/
+
+        #fonctionnement {
+
+            div {
+
+                ul {
+                    width: 50%;
+                }
+
+            }
+
+        }
+
+        /***TROISIEME SECTION***/
+
+        #restaurants {
+
+            /***TITRE***/
+
+            h1 {
+                padding-bottom: 15px;
+            }
+
+            /***DIV***/
+
+            .flex {
+                width: 50%;
+
+                .groupe .animation .icone_droite .fa-heart-animated {
+                    left: 96.7%;
+                }
+                
+            }
+
+        }
+
+    }
+
+}
+
+@media screen and (min-width: 1600px) { 
+   
+    /***PREMIERE SECTION LIEN***/
+
+    main #reservez a {
+        width: 13%;
+    }
+
+}
