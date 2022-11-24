@@ -115,7 +115,6 @@ p {
 /***HEADER***/
 
 header {    
-    text-align: center;
 
     /***LIEN***/
 
@@ -446,6 +445,10 @@ footer {
         border-radius: 0;
     }
 
+    #imageDeFond_laNoteEnchantee img {
+        height: 250px;
+    }
+
     /***PREMIERE SECTION***/
     
     #section_carte {
@@ -573,6 +576,7 @@ footer {
 
                         }
                     }
+
                     .prix {
                         display:flex;
                         justify-content: flex-end;
@@ -623,7 +627,7 @@ footer {
         padding: 20px 0px 20px 0px;
         margin-right: 15px;
 
-        #contenu {
+        .contenu {
             position: relative;
             height: 26px;
             cursor: pointer;
@@ -648,7 +652,7 @@ footer {
 
         }
         
-        #contenu:hover .fa-heart-animated {
+        .contenu:hover .fa-heart-animated {
             font-size: 25px;
         }
 
@@ -778,6 +782,14 @@ footer {
 
     main #restaurants .flex .groupe .animation .icone_droite .fa-heart-animated {
         left: 95%;
+    }
+
+}
+
+@media screen and (min-width: 370px) { 
+
+    main #reservez a {
+        width: 61%;
     }
 
 }
